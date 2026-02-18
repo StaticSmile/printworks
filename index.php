@@ -96,19 +96,19 @@ if (isset($_SESSION['user_id'])){
                     <a href="view_products.php"><i class="bx bx-chevron-right"></i></a>
                 </div> 
                 <div class="box">
-                    <img src="../img/thumb0.jpg">
+                    <img src="img/thumb0.jpg">
                     <h3>holograpic stickers</h3>
                     <p>Eye-catching holographic stickers with a sleek, color-shifting finish.</p>
                     <a href="view_products.php"><i class="bx bx-chevron-right"></i></a>
                 </div>
                 <div class="box">
-                    <img src="../img/thumb1.jpg">
+                    <img src="img/thumb1.jpg">
                     <h3>chrome stickers</h3>
                     <p>A mirror-like metallic shine that catches the light and adds a striking, look to any surface.</p>
                     <a href="view_products.php"><i class="bx bx-chevron-right"></i></a>
                 </div>
                 <div class="box">
-                    <img src="../img/thumb.jpg">
+                    <img src="img/thumb.jpg">
                     <h3>sticker sheet</h3>
                     <p>A convenient sheet of high-quality stickers, ready to peel and use.</p>
                     <a href="view_products.php"><i class="bx bx-chevron-right"></i></a>
@@ -194,4 +194,5 @@ if (isset($_SESSION['user_id'])){
     <?php include 'alert.php'; ?>
 </body>
 </html>
+
 
