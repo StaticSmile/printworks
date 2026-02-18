@@ -1,5 +1,5 @@
 <?php
-include '../components/connection.php';
+include 'connection.php';
 session_start();
 if (isset($_SESSION['user_id'])){
         $user_id = $_SESSION['user_id'];
@@ -25,7 +25,7 @@ if (isset($_SESSION['user_id'])){
     <title>Print Works - home page</title>
 </head>
 <body>
-    <?php include '../components/header.php'; ?>
+    <?php include 'header.php'; ?>
     <div class="main">
         <section class="home-section">
                 <div class="slider">
@@ -187,10 +187,11 @@ if (isset($_SESSION['user_id'])){
                 </div>
             </div>
         </section>-->
-        <?php include '../components/footer.php'; ?>
+        <?php include 'footer.php'; ?>
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js"></script>
     <script src="script.js"></script>
-    <?php include '../components/alert.php'; ?>
+    <?php include 'alert.php'; ?>
 </body>
 </html>
+
