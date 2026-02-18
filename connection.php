@@ -1,19 +1,16 @@
 <?php
-    $db_name = 'mysql:host=localhost;dbname=printworks_db';
-    $db_user = 'root';
-    $db_password ='';
+$host = getenv("DB_HOST");
+$db   = getenv("DB_NAME");
+$user = getenv("DB_USER");
+$pass = getenv("DB_PASS");
 
-    $conn = new PDO($db_name,$db_user,$db_password);
+$dsn = "mysql:host=$host;port=3306;dbname=$db;charset=utf8mb4";
 
-    
-
-    function unique_id(){
-        $chars = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
-        $charLength = strLen($chars);
-        $randomString=  '';
-        for ($i=0; $i < 20 ; $i++) {
-            $randomString.=$chars[mt_rand(0, $charLength - 1)];
-        }
-        return $randomString;
-    }
+try {
+    $conn = new PDO($dsn, $user, $pass, [
+        PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION
+    ]);
+} catch (PDOException $e) {
+    die("Database connection failed: " . $e->getMessage());
+}
 ?>
